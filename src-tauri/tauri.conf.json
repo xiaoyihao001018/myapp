@@ -1,7 +1,7 @@
 {
   "productName": "myapp",
   "version": "0.0.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.tauri.dev1",
   "build": {
     "beforeDevCommand": "pnpm start",
     "devUrl": "http://localhost:1420",
