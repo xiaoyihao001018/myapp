@@ -1,0 +1,45 @@
+{
+  "productName": "myapp",
+  "version": "0.0.0",
+  "identifier": "com.tauri.dev",
+  "build": {
+    "beforeDevCommand": "pnpm start",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist/myapp/browser"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "myapp",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDhFNkI1RUJFNTI4RkNCNkEKUldScXk0OVN2bDVyanBSV0VGZ0wyTUtpdUtQVlVFZW04Q3h4U3NxTzRGT3JnRDg5Z214Z21uMDgK",
+      "endpoints": [
+        "http://118.89.122.192:8080/{{target}}/{{arch}}/{{current_version}}"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}
